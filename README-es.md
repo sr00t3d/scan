@@ -27,6 +27,24 @@ sudo ./scan.sh --path /home/percio/public_html --exit-code
 
 ---
 
+## Ejemplo de Salida Real
+
+```text
+==================================================================================================
+ scan.sh v2.0.0 | Scan | /tmp/scan-e2e/webroot | heuristic | 2026-11-24T02:39:46Z
+==================================================================================================
+SEVERITY  ENGINE     SIGNATURE                   ACTION       PATH
+--------  ---------  --------------------------  -----------  --------------------------------------------------
+CRITICAL  heuristic  PHP.Webshell.UserInputExec  QUARANTINED  /tmp/scan-e2e/webroot/cmd.php
+CRITICAL  heuristic  EICAR-Test-Signature        QUARANTINED  /tmp/scan-e2e/webroot/eicar.txt
+HIGH      heuristic  PHP.Webshell.EvalBase64     QUARANTINED  /tmp/scan-e2e/webroot/wp-content/uploads/shell.php
+
+Summary: 4 file(s) scanned | 3 threat(s) found
+Vault:   /var/quarantine/scan/20261124-023946
+```
+
+---
+
 ## Licencia
 
 Licenciado bajo [Apache License 2.0](LICENSE).
